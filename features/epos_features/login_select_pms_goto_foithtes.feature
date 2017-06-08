@@ -15,7 +15,7 @@ Feature: login success and goto foithtes
     #Then I wait 5 seconds    #### ayto pithanon xreiazetai otan kaneis non-headless testing ####
     Then I should be in url "http://localhost/epos/src/users/main.php"
     And I should see the Επιλεγμένο ΠΜΣ:
-    When I hit on selection field with id "sel_program"
+    When I hit on selection field with name "sel_program"
     #select2-sel_program-a5-container #select2-sel_program-ko-container #form-control
     Then I select option "Αλλο (Χορηγίες)" from the search field with class "sel_program"
     When I click on Επιλογή
@@ -23,3 +23,10 @@ Feature: login success and goto foithtes
     Then There should be an element with class name "dataTable_wrapper"
     When I click on Φοιτητές Προγράμματος
     Then I should be in url "http://localhost/epos/src/users/main.php?selid=1"
+#### ME AYTON TON TROPO MPOREIS NA KANEIS GIVEN KAI NA SYNEXISEI APO KEI POU EISAI ####
+#### AN OMWS KANEIS NEO Scenario EXEI PAPSEI TO LOGIN KAI DEN MPAINEIS MESA ####
+#  @javascript
+#  Scenario: I'll do whatever I want
+    Given I am on the "http://localhost/epos/src/users/main.php" page
+    #Then I should see "Κεντρικός Πίνακας WesgdgsgdfbPos" in a link
+    Then I should see the Κεντρικός Πίνακας WebPos

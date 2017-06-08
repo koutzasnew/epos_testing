@@ -10,6 +10,10 @@ require 'capybara/poltergeist'
 require 'phantomjs/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
+# session = Capybara::Session.new :selenium
+
+#include RSpec::Matchers  # mallon einai mesa aytomata
+
 #require 'selenium-webdriver'
 #require 'test/unit/assertions'
 #World(Test::Unit::Assertions)
@@ -25,3 +29,8 @@ Capybara.default_max_wait_time = 5
 #Capybara.default_selector = :xpath
 #Capybara.javascript_driver = :selenium # ayto einai to default
 #World(Capybara)
+
+# World do
+#   session = Capybara::Session.new :poltergeist
+#   session
+# end
